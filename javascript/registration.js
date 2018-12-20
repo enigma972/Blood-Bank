@@ -40,7 +40,7 @@ sub_btn.addEventListener("click", () => {
     let address = address_s.value;
     let blood_grp = blood_grp_s.value;
     let age = age_s.value;
-    let num = num_s.value;
+    let number = num_s.value;
 
     if (age <= 0) {
         swal({
@@ -51,7 +51,7 @@ sub_btn.addEventListener("click", () => {
     }
     else {
         if (name !== "" && email != "" && address != "" && age != "" && blood_grp != "") {
-            if (num.length != 11) {
+            if (number.length != 11) {
                 swal({
                     title: "ERROR",
                     text: "Phone number must have 11 digits!",
