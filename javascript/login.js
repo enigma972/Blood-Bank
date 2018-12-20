@@ -11,7 +11,7 @@ login_btn.addEventListener("click", () => {
     firebase.auth().signInWithEmailAndPassword(email, password).then((data) => {
             wrap.style.filter = "blur(0px)";
             loader.style.display = "none";
-            localStorage.setItem("user",JSON.stringify(data));
+           
             
             swal({
                 title: "Congratulations",
@@ -20,6 +20,7 @@ login_btn.addEventListener("click", () => {
                 })
               .then((data) => {
                 if (data) {
+                    
                  location="../pages/dashboard.html";
               }
             });

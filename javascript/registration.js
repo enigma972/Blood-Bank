@@ -18,13 +18,18 @@ let down = document.getElementById("down");
 let sub_btn = document.getElementById("sub_btn");
 
 let uid;
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-        uid = user.uid;
-        console.log(uid)
-    }
-
+window.addEventListener("load",()=>
+{
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            uid = user.uid;
+            email_s.value=user.email;
+            console.log(uid)
+        }
+    
+    })
 })
+
 
 
 
